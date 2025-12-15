@@ -1,0 +1,159 @@
+/* ==================== MODAL CLIENTE ==================== */
+.modal-cliente-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(44, 62, 80, 0.85);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    animation: fadeInModalCliente 0.3s ease;
+}
+
+@keyframes fadeInModalCliente {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-cliente-box {
+    background: white;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 650px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    animation: slideUpModalCliente 0.3s ease;
+}
+
+@keyframes slideUpModalCliente {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-cliente-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    border-bottom: 2px solid #e0e0e0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 12px 12px 0 0;
+}
+
+.modal-cliente-header h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.modal-cliente-close {
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #7f8c8d;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s;
+    padding: 0;
+    line-height: 1;
+}
+
+.modal-cliente-close:hover {
+    background-color: #e74c3c;
+    color: white;
+    transform: rotate(90deg);
+}
+
+.modal-cliente-box form {
+    padding: 25px;
+}
+
+.modal-cliente-buttons {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 2px solid #e0e0e0;
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+.modal-cliente-buttons .btn {
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    min-width: 120px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .modal-cliente-box {
+        width: 95%;
+        margin: 10px;
+    }
+
+    .modal-cliente-header {
+        padding: 15px 20px;
+    }
+
+    .modal-cliente-header h3 {
+        font-size: 18px;
+    }
+
+    .modal-cliente-box form {
+        padding: 20px;
+    }
+
+    .modal-cliente-buttons {
+        flex-direction: column;
+    }
+
+    .modal-cliente-buttons .btn {
+        width: 100%;
+    }
+}
+
+/* Animación de cierre */
+.modal-cliente-overlay.closing {
+    animation: fadeOutModalCliente 0.3s ease;
+}
+
+@keyframes fadeOutModalCliente {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.modal-cliente-overlay.closing .modal-cliente-box {
+    animation: slideDownModalCliente 0.3s ease;
+}
+
+@keyframes slideDownModalCliente {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+}

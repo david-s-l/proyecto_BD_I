@@ -1,0 +1,20 @@
+# Configuración sensible
+config/db.php
+config/parameters.php
+
+# Uploads (opcional, depende si quieres subir imágenes)
+uploads/
+
+# Logs
+*.log
+
+# Archivos temporales
+*.tmp
+*.swp
+
+# SO
+.DS_Store
+Thumbs.db
+
+# Vendor (si luego usas composer)
+vendor/
