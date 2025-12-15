@@ -1,4 +1,3 @@
-
 # Sistema de Gestión Comercial – Base de Datos I
 
 Proyecto desarrollado como trabajo final del curso **Base de Datos I** (UNSA).
@@ -76,6 +75,7 @@ Cada rol tiene permisos específicos controlados mediante middleware.
 
 ## ✍️ Autores
 
+* **David**
 
 ---
 
