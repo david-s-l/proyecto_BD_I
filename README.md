@@ -74,15 +74,8 @@ Cada rol tiene permisos específicos controlados mediante middleware.
 * Auditoría de acciones
 * Reportes por fechas y proveedores
 
-## 👥 Trabajo colaborativo
-
-Este proyecto utiliza GitHub para el trabajo en equipo.
-Los colaboradores pueden clonar el repositorio, editar el código y subir cambios mediante commits.
-
 ## ✍️ Autores
 
-* **David Fidel Sapacayo Llacma**
-* Colaborador: *(por definir)*
 
 ---
 
